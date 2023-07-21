@@ -40,6 +40,67 @@ class _QuoteListState extends State<QuoteList> {
         centerTitle: true,
         backgroundColor: Colors.redAccent,
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.all(0),
+          children:  [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                  color: Colors.green
+              ),
+              child: UserAccountsDrawerHeader(
+                decoration: BoxDecoration(color: Colors.green),
+                accountName: Text(
+                  "Joseph Kamania Chiira",
+                  style: TextStyle(fontSize: 18),
+                ),
+                accountEmail: Text("kamaniajoseph@gmail.com"),
+                currentAccountPictureSize: Size.square(50),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Color.fromARGB(255, 165, 255, 137),
+                  child: Text(
+                    "J",
+                    style: TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.blue
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("My Profile"),
+              onTap: (){Navigator.pop(context);},
+            ),
+            ListTile(
+              leading: Icon(Icons.book),
+              title: Text("My Course"),
+              onTap: (){Navigator.pop(context);},
+            ),
+            ListTile(
+              leading: Icon(Icons.workspace_premium),
+              title: Text("Go Premium"),
+              onTap: (){Navigator.pop(context);},
+            ),
+            ListTile(
+              leading: Icon(Icons.video_label),
+              title: Text("Saved Videos"),
+              onTap: (){Navigator.pop(context);},
+            ),
+            ListTile(
+              leading: Icon(Icons.edit),
+              title: Text("Edit Profile"),
+              onTap: (){Navigator.pop(context);},
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text("Logout"),
+              onTap: (){Navigator.pop(context);},
+            ),
+          ],
+        ),
+      ),
       body: Column(
         children: quotes
             .map((quote) => QuoteCard(

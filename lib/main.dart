@@ -43,11 +43,9 @@ class _QuoteListState extends State<QuoteList> {
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.all(0),
-          children:  [
+          children: [
             const DrawerHeader(
-              decoration: BoxDecoration(
-                  color: Colors.green
-              ),
+              decoration: BoxDecoration(color: Colors.green),
               child: UserAccountsDrawerHeader(
                 decoration: BoxDecoration(color: Colors.green),
                 accountName: Text(
@@ -60,10 +58,7 @@ class _QuoteListState extends State<QuoteList> {
                   backgroundColor: Color.fromARGB(255, 165, 255, 137),
                   child: Text(
                     "J",
-                    style: TextStyle(
-                        fontSize: 30.0,
-                        color: Colors.blue
-                    ),
+                    style: TextStyle(fontSize: 30.0, color: Colors.blue),
                   ),
                 ),
               ),
@@ -71,32 +66,44 @@ class _QuoteListState extends State<QuoteList> {
             ListTile(
               leading: Icon(Icons.person),
               title: Text("My Profile"),
-              onTap: (){Navigator.pop(context);},
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
             ListTile(
               leading: Icon(Icons.book),
               title: Text("My Course"),
-              onTap: (){Navigator.pop(context);},
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
             ListTile(
               leading: Icon(Icons.workspace_premium),
               title: Text("Go Premium"),
-              onTap: (){Navigator.pop(context);},
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
             ListTile(
               leading: Icon(Icons.video_label),
               title: Text("Saved Videos"),
-              onTap: (){Navigator.pop(context);},
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
             ListTile(
               leading: Icon(Icons.edit),
               title: Text("Edit Profile"),
-              onTap: (){Navigator.pop(context);},
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
             ListTile(
               leading: Icon(Icons.logout),
               title: Text("Logout"),
-              onTap: (){Navigator.pop(context);},
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
           ],
         ),
